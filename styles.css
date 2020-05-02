@@ -48,7 +48,7 @@ p {
     letter-spacing: 1px;
 }
 
-/*** NAME BAR: ***/
+/*** FRONT PAGE: ***/
 .bgimg {
     background-image: url(./resources/imgs/busstopcropped.png);
     background-repeat: no-repeat;
@@ -58,11 +58,29 @@ p {
     width: 100%;
     height: 100vh;
 }
+#navbar {
+    margin-top: 0;
+    list-style: none;
+    position: absolute;
+}
+#navbar li {
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 8px 2vw;
+}
+#navbar li a {
+    color: var(--white);
+    text-decoration: none;
+    font-family: var(--ubuntu);
+    font-size: 18px;
+}
+
 #namebar {
     text-align: left;
     width: 100%;
     height: 100vh;
-    padding: 5% 3%;
+    padding: 20vw 3%;
 }
 #namebar .majors {
     margin-top: 0;
