@@ -67,13 +67,27 @@ p {
     display: block;
     float: left;
     margin: 0;
-    padding: 8px 2vw;
+    padding: 1vh 2vw;
 }
 #navbar li a {
     color: var(--white);
     text-decoration: none;
     font-family: var(--ubuntu);
     font-size: 18px;
+}
+.bar {
+    transition: 600ms;
+}
+#navbar:hover .bar {
+    background-color: var(--white);
+    height: 4px;
+    margin-bottom: 5px;
+}
+#navbar li:hover .bar {
+    background-color: var(--bright-pink);
+}
+#navbar li:hover a {
+    color: var(--bright-pink);
 }
 
 #namebar {
