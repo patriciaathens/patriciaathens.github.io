@@ -1,10 +1,7 @@
 /*** FONT IMPORTS: ***/
 @import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap');
-@font-face {
-    font-family: "Happy Fox";
-    src: url(./resources/fonts/Happy-Fox/HappyFox-Condensed.otf);
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
 /*** GENERAL ELEMENTS: ***/
 :root {
@@ -13,9 +10,10 @@
     --blue-dark: #162447;
     --light-pink: #E43F5A;
     --bright-pink: #BD0740;
+    --white: #E0E7ED;
 
     --handwritten: 'East Sea Dokdo';
-    --handwritten-tall: 'Happy Fox';
+    --ubuntu: 'Ubuntu Condensed'
 }
 * {
     box-sizing: border-box;
@@ -31,8 +29,42 @@ body {
 
 /*** FONT FAMILYS ***/
 h1 {
-    font-family: var(--handwritten-tall);
+    font-family: 'Oswald';
+    color: var(--white);
+    letter-spacing: 5px;
+    font-size: 50px;
+    margin: 0;
 }
 h2 {
-    font-family: var(--handwritten);
+    font-family: var(--ubuntu);
+    color: var(--white);
+    font-size: 25px;
+    letter-spacing: 2px;
+}
+p {
+    font-family: var(--ubuntu);
+    color: var(--white);
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+/*** NAME BAR: ***/
+.bgimg {
+    background-image: url(./resources/imgs/busstopcropped.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+}
+#namebar {
+    text-align: left;
+    width: 100%;
+    height: 100vh;
+    padding: 5% 3%;
+}
+#namebar .majors {
+    margin-top: 0;
+    margin-bottom: 2rem
 }
