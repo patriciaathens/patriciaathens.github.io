@@ -1,0 +1,38 @@
+/*** FONT IMPORTS: ***/
+@import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap');
+@font-face {
+    font-family: "Happy Fox";
+    src: url(./resources/fonts/Happy-Fox/HappyFox-Condensed.otf);
+}
+
+
+/*** GENERAL ELEMENTS: ***/
+:root {
+    --darkest: #09111C;
+    --gray-dark: #1B1B2F;
+    --blue-dark: #162447;
+    --light-pink: #E43F5A;
+    --bright-pink: #BD0740;
+
+    --handwritten: 'East Sea Dokdo';
+    --handwritten-tall: 'Happy Fox';
+}
+* {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+    min-height: 100%;
+}
+body {
+    margin: 0 auto;
+    background-color: var(--darkest);
+}
+
+/*** FONT FAMILYS ***/
+h1 {
+    font-family: var(--handwritten-tall);
+}
+h2 {
+    font-family: var(--handwritten);
+}
