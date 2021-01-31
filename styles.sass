@@ -1,0 +1,131 @@
+/*********************/
+/*** FONT IMPORTS: ***/
+/*********************/
+@import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;900&display=swap')
+@font-face
+    font-family: 'Space Grotesk'
+    src: url("resources/fonts/SpaceGrotesk-2.0.0/ttf/SpaceGrotesk[wght].ttf")
+    src: url("resources/fonts/SpaceGrotesk-2.0.0/woff2/SpaceGrotesk[wght].woff2") format("woff")
+    src: url("resources/fonts/SpaceGrotesk-2.0.0/otf/SpaceGrotesk-Regular.otf") format("opentype")
+@font-face
+    font-family: 'Nurom'
+    src: url("resources/fonts/nurom/Nurom-Bold.ttf")
+
+/******************/
+/*** VARIABLES: ***/
+/******************/
+$darkest: #28282A
+$med-gray: #464649
+$dark-blue: #1696A2
+$light-blue: #81E5EE
+$light-pink: #E4626B
+$white: #F5F5F5
+
+/*************************/
+/*** GENERAL ELEMENTS: ***/
+/*************************/
+*
+    box-sizing: border-box
+html
+    scroll-behavior: smooth
+    min-height: 100%
+    font-size: 1vw
+body
+    margin: 0 auto
+    padding: 0 20%
+    background-color: $darkest
+i
+    color: $dark-blue
+body::-webkit-scrollbar
+  width: 1em
+body::-webkit-scrollbar-track
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3)
+body::-webkit-scrollbar-thumb
+  background-color: $med-gray
+  outline: 1px solid $darkest
+
+/************************/
+/*** SPECIAL EFFECTS: ***/
+/************************/
+h1::selection, h2::selection, h3::selection,p::selection
+    background: $dark-blue
+h1::-moz-selection, h2::-moz-selection, h3::-moz-selection,p::-moz-selection
+    background: $dark-blue
+p.blue::selection
+    background: #FFFFFF
+p.blue::-moz-selection
+    background: #FFFFFF
+
+/********************/
+/*** FONT FAMILYS ***/
+/********************/
+h1
+    font-family: 'Space Grotesk'
+    color: $white
+    letter-spacing: 2px
+    font-size: min(6em, 50px)
+    margin: 0
+h2
+    font-family: 'Space Grotesk'
+    color: $white
+    font-size: min(3em, 25px)
+    letter-spacing: 2px
+h3
+    font-family: 'Inconsolata'
+    color: $light-blue
+    font-size: max(2em, 15px)
+    letter-spacing: 2px
+p
+    font-family: 'Inconsolata'
+    color: $white
+    font-size: max(2em, 15px)
+    letter-spacing: 1px
+    margin: 0 0 1em
+p.blue
+    color: $dark-blue
+    font-weight: 900
+    letter-spacing: 3px
+    margin: 0 0 0.5em
+
+/*******************/
+/*** FRONT PAGE: ***/
+/*******************/
+// Navigation Bar
+#navbar
+    margin-top: 0
+    list-style: none
+    position: absolute
+    li
+        display: block
+        float: left
+        margin: 0
+        padding: 1vh 2vw
+    li a
+        color: var(--white)
+        text-decoration: none
+        font-family: 'Inconsolata'
+        font-size: 18px
+    li:hover .bar
+        background-color: $light-pink
+    li:hover a
+        color: $light-pink
+#navbar:hover .bar
+    background-color: $white
+    height: 4px
+    margin-bottom: 5px
+.bar
+    transition: 600ms
+
+
+// Sections
+.section
+    text-align: left
+    width: 100%
+    height: 100vh
+    padding: 25vh 0
+.section .majors
+    margin-top: 0
+    margin-bottom: 2rem
+

@@ -1,102 +1,164 @@
+/*********************/
 /*** FONT IMPORTS: ***/
-@import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
-
+/*********************/
+@import url("https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;900&display=swap");
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("resources/fonts/SpaceGrotesk-2.0.0/ttf/SpaceGrotesk[wght].ttf");
+  src: url("resources/fonts/SpaceGrotesk-2.0.0/woff2/SpaceGrotesk[wght].woff2") format("woff");
+  src: url("resources/fonts/SpaceGrotesk-2.0.0/otf/SpaceGrotesk-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "Nurom";
+  src: url("resources/fonts/nurom/Nurom-Bold.ttf");
+}
+/******************/
+/*** VARIABLES: ***/
+/******************/
+/*************************/
 /*** GENERAL ELEMENTS: ***/
-:root {
-    --darkest: #09111C;
-    --gray-dark: #1B1B2F;
-    --blue-dark: #162447;
-    --light-pink: #E43F5A;
-    --bright-pink: #BD0740;
-    --white: #E0E7ED;
-
-    --handwritten: 'East Sea Dokdo';
-    --ubuntu: 'Ubuntu Condensed'
-}
+/*************************/
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
+
 html {
-    scroll-behavior: smooth;
-    min-height: 100%;
+  scroll-behavior: smooth;
+  min-height: 100%;
+  font-size: 1vw;
 }
+
 body {
-    margin: 0 auto;
-    background-color: var(--darkest);
+  margin: 0 auto;
+  padding: 0 20%;
+  background-color: #28282A;
 }
 
+i {
+  color: #1696A2;
+}
+
+body::-webkit-scrollbar {
+  width: 1em;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #464649;
+  outline: 1px solid #28282A;
+}
+
+/************************/
+/*** SPECIAL EFFECTS: ***/
+/************************/
+h1::selection, h2::selection, h3::selection, p::selection {
+  background: #1696A2;
+}
+
+h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, p::-moz-selection {
+  background: #1696A2;
+}
+
+p.blue::selection {
+  background: #FFFFFF;
+}
+
+p.blue::-moz-selection {
+  background: #FFFFFF;
+}
+
+/********************/
 /*** FONT FAMILYS ***/
+/********************/
 h1 {
-    font-family: 'Oswald';
-    color: var(--white);
-    letter-spacing: 5px;
-    font-size: 50px;
-    margin: 0;
-}
-h2 {
-    font-family: var(--ubuntu);
-    color: var(--white);
-    font-size: 25px;
-    letter-spacing: 2px;
-}
-p {
-    font-family: var(--ubuntu);
-    color: var(--white);
-    font-size: 18px;
-    letter-spacing: 1px;
+  font-family: "Space Grotesk";
+  color: #F5F5F5;
+  letter-spacing: 2px;
+  font-size: min(6em, 50px);
+  margin: 0;
 }
 
-/*** FRONT PAGE: ***/
-.bgimg {
-    background-image: url(./resources/imgs/busstopcropped.png);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: right;
-    margin: 0;
-    width: 100%;
-    height: 100vh;
+h2 {
+  font-family: "Space Grotesk";
+  color: #F5F5F5;
+  font-size: min(3em, 25px);
+  letter-spacing: 2px;
 }
+
+h3 {
+  font-family: "Inconsolata";
+  color: #81E5EE;
+  font-size: max(2em, 15px);
+  letter-spacing: 2px;
+}
+
+p {
+  font-family: "Inconsolata";
+  color: #F5F5F5;
+  font-size: max(2em, 15px);
+  letter-spacing: 1px;
+  margin: 0 0 1em;
+}
+
+p.blue {
+  color: #1696A2;
+  font-weight: 900;
+  letter-spacing: 3px;
+  margin: 0 0 0.5em;
+}
+
+/*******************/
+/*** FRONT PAGE: ***/
+/*******************/
 #navbar {
-    margin-top: 0;
-    list-style: none;
-    position: absolute;
+  margin-top: 0;
+  list-style: none;
+  position: absolute;
 }
 #navbar li {
-    display: block;
-    float: left;
-    margin: 0;
-    padding: 1vh 2vw;
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 1vh 2vw;
 }
 #navbar li a {
-    color: var(--white);
-    text-decoration: none;
-    font-family: var(--ubuntu);
-    font-size: 18px;
-}
-.bar {
-    transition: 600ms;
-}
-#navbar:hover .bar {
-    background-color: var(--white);
-    height: 4px;
-    margin-bottom: 5px;
+  color: var(--white);
+  text-decoration: none;
+  font-family: "Inconsolata";
+  font-size: 18px;
 }
 #navbar li:hover .bar {
-    background-color: var(--bright-pink);
+  background-color: #E4626B;
 }
 #navbar li:hover a {
-    color: var(--bright-pink);
+  color: #E4626B;
 }
 
-#namebar {
-    text-align: left;
-    width: 100%;
-    height: 100vh;
-    padding: 20vw 3%;
+#navbar:hover .bar {
+  background-color: #F5F5F5;
+  height: 4px;
+  margin-bottom: 5px;
 }
-#namebar .majors {
-    margin-top: 0;
-    margin-bottom: 2rem
+
+.bar {
+  transition: 600ms;
 }
+
+.section {
+  text-align: left;
+  width: 100%;
+  height: 100vh;
+  padding: 25vh 0;
+}
+
+.section .majors {
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+/*# sourceMappingURL=styles.css.map */
