@@ -20,7 +20,7 @@ $darkest: #28282A
 $med-gray: #464649
 $dark-blue: #1696A2
 $light-blue: #81E5EE
-$light-pink: #E4626B
+$light-pink: #EA858C
 $white: #F5F5F5
 
 /*************************/
@@ -44,15 +44,38 @@ body::-webkit-scrollbar-track
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3)
 body::-webkit-scrollbar-thumb
   background-color: $med-gray
+  border-radius: 10px
   outline: 1px solid $darkest
-
+  transition: 0.3s
+body::-webkit-scrollbar-thumb:hover
+  background-color: $dark-blue
+  transition: 0.3s
+.decorbar
+    background-color: $dark-blue
+    height: 12px
+    width: 80px
+    border-radius: 10px
+    margin: 10px 0
+.db-left
+    position: absolute
+    left: 18vw
+    width: 50px
+.decorbarbg
+    background-color: $med-gray
+    border-radius: 40em 0 0 40em
+    margin: 10vh 0
+    height: 400px
+    width: 89vw
+    left: 10vw
+    position: absolute
+    z-index: -1
 /************************/
 /*** SPECIAL EFFECTS: ***/
 /************************/
 h1::selection, h2::selection, h3::selection,p::selection
-    background: $dark-blue
+    background: $light-pink
 h1::-moz-selection, h2::-moz-selection, h3::-moz-selection,p::-moz-selection
-    background: $dark-blue
+    background: $light-pink
 p.blue::selection
     background: #FFFFFF
 p.blue::-moz-selection
@@ -75,12 +98,12 @@ h2
 h3
     font-family: 'Inconsolata'
     color: $light-blue
-    font-size: max(2em, 15px)
+    font-size: max(1.5em, 15px)
     letter-spacing: 2px
 p
     font-family: 'Inconsolata'
     color: $white
-    font-size: max(2em, 15px)
+    font-size: max(1.5em, 15px)
     letter-spacing: 1px
     margin: 0 0 1em
 p.blue
@@ -94,27 +117,30 @@ p.blue
 /*******************/
 // Navigation Bar
 #navbar
-    margin-top: 0
+    top: 50%
+    left: 0
     list-style: none
-    position: absolute
-    li
-        display: block
-        float: left
-        margin: 0
-        padding: 1vh 2vw
-    li a
-        color: var(--white)
-        text-decoration: none
-        font-family: 'Inconsolata'
-        font-size: 18px
-    li:hover .bar
-        background-color: $light-pink
-    li:hover a
-        color: $light-pink
+    position: fixed
+    transform: translateY(-50%)
+    ul
+        position: relative
+        list-style: none
+        padding-left: 0
+        li
+            padding: 3vh 1vh
+            a
+                color: $white
+                text-decoration: none
+                font-family: 'Inconsolata'
+                font-size: 18px
+        li:hover .bar
+            background-color: $light-pink
+        li:hover a
+            color: $light-pink
 #navbar:hover .bar
     background-color: $white
-    height: 4px
-    margin-bottom: 5px
+    width: 4px
+    margin-right: 5px
 .bar
     transition: 600ms
 
@@ -123,9 +149,10 @@ p.blue
 .section
     text-align: left
     width: 100%
+    padding: 15vh 0
+    vertical-alight: middle
+.vcenter
+    position: relative
+    top: 50%
+#namebar
     height: 100vh
-    padding: 25vh 0
-.section .majors
-    margin-top: 0
-    margin-bottom: 2rem
-
