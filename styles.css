@@ -125,14 +125,14 @@ h2 {
 h3 {
   font-family: "Inconsolata";
   color: #81E5EE;
-  font-size: max(1.5em, 15px);
+  font-size: clamp(15px, 1.5em, 25px);
   letter-spacing: 2px;
 }
 
 p {
   font-family: "Inconsolata";
   color: #F5F5F5;
-  font-size: max(1.5em, 15px);
+  font-size: clamp(15px, 1.5em, 25px);
   letter-spacing: 1px;
   margin: 0 0 1em;
 }
@@ -163,28 +163,37 @@ p.blue {
   padding: 3vh 1vh;
 }
 #navbar ul li a {
-  color: #F5F5F5;
+  color: #1696A2;
   text-decoration: none;
   font-family: "Inconsolata";
-  font-size: 18px;
+  font-size: clamp(18px, 1.5em, 28px);
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
 }
-#navbar ul li:hover .bar {
-  background-color: #EA858C;
+#navbar ul li a.active {
+  color: #81E5EE;
 }
-#navbar ul li:hover a {
-  color: #EA858C;
-}
-
-#navbar:hover .bar {
-  background-color: #F5F5F5;
-  width: 4px;
-  margin-right: 5px;
-}
-
-.bar {
-  transition: 600ms;
+#navbar ul li a:before {
+  content: attr(title);
+  position: absolute;
+  overflow-x: hidden;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
+#navbar ul li:hover a:before {
+  color: #81E5EE;
+  animation: hover 1s steps(12, end);
+}
+
+@keyframes hover {
+  from {
+    height: 0;
+  }
+  to {
+    height: 200px;
+  }
+}
 .section {
   text-align: left;
   width: 100%;

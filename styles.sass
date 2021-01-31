@@ -98,12 +98,12 @@ h2
 h3
     font-family: 'Inconsolata'
     color: $light-blue
-    font-size: max(1.5em, 15px)
+    font-size: clamp(15px, 1.5em, 25px)
     letter-spacing: 2px
 p
     font-family: 'Inconsolata'
     color: $white
-    font-size: max(1.5em, 15px)
+    font-size: clamp(15px, 1.5em, 25px)
     letter-spacing: 1px
     margin: 0 0 1em
 p.blue
@@ -129,21 +129,28 @@ p.blue
         li
             padding: 3vh 1vh
             a
-                color: $white
+                color: $dark-blue
                 text-decoration: none
                 font-family: 'Inconsolata'
-                font-size: 18px
-        li:hover .bar
-            background-color: $light-pink
-        li:hover a
-            color: $light-pink
-#navbar:hover .bar
-    background-color: $white
-    width: 4px
-    margin-right: 5px
-.bar
-    transition: 600ms
-
+                font-size: clamp(18px, 1.5em, 28px)
+                writing-mode: vertical-rl
+                text-orientation: mixed
+            a.active
+                color: $light-blue
+            a:before
+                content: attr(title)
+                position: absolute
+                overflow-x: hidden
+                white-space: nowrap
+                overflow: hidden
+#navbar ul li:hover a:before
+    color: $light-blue
+    animation: hover 1s steps(12,end)
+@keyframes hover
+    from
+        height: 0
+    to
+        height: 200px
 
 // Sections
 .section
