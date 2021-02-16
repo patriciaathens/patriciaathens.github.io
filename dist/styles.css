@@ -6,27 +6,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;400;900&display=swap");
 @font-face {
   font-family: 'Space Grotesk';
-  src: url("resources/fonts/SpaceGrotesk-2.0.0/ttf/SpaceGrotesk[wght].ttf");
-  src: url("resources/fonts/SpaceGrotesk-2.0.0/woff2/SpaceGrotesk[wght].woff2") format("woff");
-  src: url("resources/fonts/SpaceGrotesk-2.0.0/otf/SpaceGrotesk-Regular.otf") format("opentype"); }
+  src: url("../resources/fonts/SpaceGrotesk-2.0.0/ttf/SpaceGrotesk[wght].ttf");
+  src: url("../resources/fonts/SpaceGrotesk-2.0.0/woff2/SpaceGrotesk[wght].woff2") format("woff");
+  src: url("../resources/fonts/SpaceGrotesk-2.0.0/otf/SpaceGrotesk-Regular.otf") format("opentype"); }
 
 @font-face {
   font-family: 'Nurom';
-  src: url("resources/fonts/nurom/Nurom-Bold.ttf"); }
+  src: url("../resources/fonts/nurom/Nurom-Bold.ttf"); }
 
 /******************/
 /*** VARIABLES: ***/
 /******************/
 /*************************/
-/*** GENERAL ELEMENTS: ***/
+/*** GENERAL ELremENTS: ***/
 /*************************/
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-size: 1vw; }
 
 html {
   scroll-behavior: smooth;
-  min-height: 100%;
-  font-size: 1vw; }
+  min-height: 100%; }
 
 body {
   margin: 0 auto;
@@ -34,10 +34,11 @@ body {
   background-color: #28282A; }
 
 i {
-  color: #1696A2; }
+  color: #1696A2;
+  font-size: 1em; }
 
 body::-webkit-scrollbar {
-  width: 1em; }
+  width: 1rem; }
 
 body::-webkit-scrollbar-track {
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); }
@@ -76,7 +77,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 .decorbarbg {
   background-color: #464649;
-  border-radius: 40em 0 0 40em;
+  border-radius: 40rem 0 0 40rem;
   margin: 10vh 0;
   height: 400px;
   width: 89vw;
@@ -106,33 +107,37 @@ h1 {
   font-family: 'Space Grotesk';
   color: #F5F5F5;
   letter-spacing: 2px;
-  font-size: 6em;
+  font-size: clamp(50px, 5rem, 80px);
   margin: 0; }
 
 h2 {
   font-family: 'Space Grotesk';
   color: #F5F5F5;
-  font-size: 3em;
+  font-size: clamp(30px, 4rem, 38px);
   letter-spacing: 2px; }
 
 h3 {
   font-family: 'Inconsolata';
   color: #81E5EE;
-  font-size: clamp(1em, 1.5em, 2em);
+  font-size: clamp(25px, 1.5rem, 30px);
   letter-spacing: 2px; }
 
 p {
   font-family: 'Inconsolata';
   color: #F5F5F5;
-  font-size: clamp(1em, 1.5em, 2em);
+  font-size: clamp(18px, 1.5rem, 25px);
   letter-spacing: 1px;
-  margin: 0 0 1em; }
+  line-height: 1.3em;
+  margin: 0 0 1rem; }
 
 p.blue {
   font-weight: 900;
   color: #1696A2;
   letter-spacing: 3px;
-  margin: 0 0 0.5em; }
+  margin: 0 0 0.5rem; }
+
+span {
+  font-size: 1em; }
 
 /*******************/
 /*** FRONT PAGE: ***/
@@ -153,21 +158,16 @@ p.blue {
         color: #1696A2;
         text-decoration: none;
         font-family: 'Inconsolata';
-        font-size: clamp(18em, 1.5em, 28em);
+        font-size: clamp(20px, 1.5rem, 30px);
         writing-mode: vertical-rl;
-        text-orientation: mixed; }
+        text-orientation: mixed;
+        transition: all .2s ease-in-out; }
       #navbar ul li a.active {
         color: #81E5EE; }
-      #navbar ul li a:before {
-        content: attr(title);
-        position: absolute;
-        overflow-x: hidden;
-        white-space: nowrap;
-        overflow: hidden; }
 
-#navbar ul li:hover a:before {
+#navbar ul li:hover a {
   color: #81E5EE;
-  animation: hover 1s steps(12, end); }
+  transform: scale(1.15); }
 
 @keyframes hover {
   from {

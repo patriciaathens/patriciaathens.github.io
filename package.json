@@ -1,25 +1,23 @@
 {
   "name": "patriciaathens.github.io",
   "version": "1.0.0",
-  "description": "personal website",
-  "main": "index.js",
+  "description": "patriciaathens.github.io",
+  "main": "script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass styles.sass styles.css -wo dist"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/patriciaathens/patriciaathens.github.io.git"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Patricia Acorda",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/patriciaathens/patriciaathens.github.io/issues"
   },
   "homepage": "https://github.com/patriciaathens/patriciaathens.github.io#readme",
   "dependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-react-app": "^3.1.2"
-  },
-  "devDependencies": {}
+    "node-sass": "^5.0.0"
+  }
 }

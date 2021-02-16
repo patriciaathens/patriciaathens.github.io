@@ -3,15 +3,15 @@
 /*********************/
 @import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap')
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap')
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;900&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;400;900&display=swap')
 @font-face
     font-family: 'Space Grotesk'
-    src: url("resources/fonts/SpaceGrotesk-2.0.0/ttf/SpaceGrotesk[wght].ttf")
-    src: url("resources/fonts/SpaceGrotesk-2.0.0/woff2/SpaceGrotesk[wght].woff2") format("woff")
-    src: url("resources/fonts/SpaceGrotesk-2.0.0/otf/SpaceGrotesk-Regular.otf") format("opentype")
+    src: url("../resources/fonts/SpaceGrotesk-2.0.0/ttf/SpaceGrotesk[wght].ttf")
+    src: url("../resources/fonts/SpaceGrotesk-2.0.0/woff2/SpaceGrotesk[wght].woff2") format("woff")
+    src: url("../resources/fonts/SpaceGrotesk-2.0.0/otf/SpaceGrotesk-Regular.otf") format("opentype")
 @font-face
     font-family: 'Nurom'
-    src: url("resources/fonts/nurom/Nurom-Bold.ttf")
+    src: url("../resources/fonts/nurom/Nurom-Bold.ttf")
 
 /******************/
 /*** VARIABLES: ***/
@@ -24,22 +24,24 @@ $light-pink: #EA858C
 $white: #F5F5F5
 
 /*************************/
-/*** GENERAL ELEMENTS: ***/
+/*** GENERAL ELremENTS: ***/
 /*************************/
 *
     box-sizing: border-box
+    font-size: 1vw
 html
     scroll-behavior: smooth
     min-height: 100%
-    font-size: 1vw
 body
     margin: 0 auto
     padding: 0 20%
     background-color: $darkest
+    // background-image: url(resources/imgs/pattern1.svg) 
 i
     color: $dark-blue
+    font-size: 1em
 body::-webkit-scrollbar
-  width: 1em
+  width: 1rem
 body::-webkit-scrollbar-track
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3)
 body::-webkit-scrollbar-thumb
@@ -50,6 +52,14 @@ body::-webkit-scrollbar-thumb
 body::-webkit-scrollbar-thumb:hover
   background-color: $dark-blue
   transition: 0.3s
+.skinny
+    font-family: 'Inconsolata'
+    font-weight: 200
+    letter-spacing: 0
+.bskinny
+    font-family: 'Inconsolata'
+    font-weight: 200
+    letter-spacing: 0
 .decorbar
     background-color: $dark-blue
     height: 12px
@@ -62,7 +72,7 @@ body::-webkit-scrollbar-thumb:hover
     width: 50px
 .decorbarbg
     background-color: $med-gray
-    border-radius: 40em 0 0 40em
+    border-radius: 40rem 0 0 40rem
     margin: 10vh 0
     height: 400px
     width: 89vw
@@ -72,9 +82,9 @@ body::-webkit-scrollbar-thumb:hover
 /************************/
 /*** SPECIAL EFFECTS: ***/
 /************************/
-h1::selection, h2::selection, h3::selection,p::selection
+h1::selection, h2::selection, h3::selection, p::selection, span::selection
     background: $light-pink
-h1::-moz-selection, h2::-moz-selection, h3::-moz-selection,p::-moz-selection
+h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, p::-moz-selection, span::-moz-selection
     background: $light-pink
 p.blue::selection
     background: #FFFFFF
@@ -88,30 +98,32 @@ h1
     font-family: 'Space Grotesk'
     color: $white
     letter-spacing: 2px
-    font-size: min(6em, 50px)
+    font-size: unquote("clamp(50px, 5rem, 80px)")
     margin: 0
 h2
     font-family: 'Space Grotesk'
     color: $white
-    font-size: min(3em, 25px)
+    font-size: unquote("clamp(30px, 4rem, 38px)")
     letter-spacing: 2px
 h3
     font-family: 'Inconsolata'
     color: $light-blue
-    font-size: clamp(15px, 1.5em, 25px)
+    font-size: unquote("clamp(25px, 1.5rem, 30px)")
     letter-spacing: 2px
 p
     font-family: 'Inconsolata'
     color: $white
-    font-size: clamp(15px, 1.5em, 25px)
+    font-size: unquote("clamp(18px, 1.5rem, 25px)")
     letter-spacing: 1px
-    margin: 0 0 1em
+    line-height: 1.3em
+    margin: 0 0 1rem
 p.blue
-    color: $dark-blue
     font-weight: 900
+    color: $dark-blue
     letter-spacing: 3px
-    margin: 0 0 0.5em
-
+    margin: 0 0 0.5rem
+span 
+    font-size: 1em
 /*******************/
 /*** FRONT PAGE: ***/
 /*******************/
@@ -132,20 +144,23 @@ p.blue
                 color: $dark-blue
                 text-decoration: none
                 font-family: 'Inconsolata'
-                font-size: clamp(18px, 1.5em, 28px)
+                font-size: unquote("clamp(20px, 1.5rem, 30px)")
                 writing-mode: vertical-rl
                 text-orientation: mixed
+                transition: all .2s ease-in-out;
             a.active
                 color: $light-blue
-            a:before
-                content: attr(title)
-                position: absolute
-                overflow-x: hidden
-                white-space: nowrap
-                overflow: hidden
-#navbar ul li:hover a:before
+                
+//             a:before
+//                 content: attr(title)
+//                 position: absolute
+//                 overflow-x: hidden
+//                 white-space: nowrap
+//                 overflow: hidden
+#navbar ul li:hover a
     color: $light-blue
-    animation: hover 1s steps(12,end)
+    transform: scale(1.15);
+//     animation: hover 1s steps(12,end)
 @keyframes hover
     from
         height: 0
@@ -156,10 +171,12 @@ p.blue
 .section
     text-align: left
     width: 100%
-    padding: 15vh 0
+    padding: 15vh 1vw
     vertical-alight: middle
+    background-color: $darkest
 .vcenter
     position: relative
     top: 50%
 #namebar
     height: 100vh
+    
