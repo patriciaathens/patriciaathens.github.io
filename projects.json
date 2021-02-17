@@ -1,0 +1,32 @@
+{
+    "projects" : [
+        {
+            "status" : "Done",
+            "title" : "St.Pauls Volunteer Hours Website",
+            "role" : "Frontend Developer",
+            "desc" : "adsf",
+            "link" : "asdf"
+        },
+        {
+            "status" : "Unfinished",
+            "title" : "Argument Diagram Website Application",
+            "role" : "Full Stack Developer",
+            "desc" : "adsf",
+            "link" : "asdf"
+        },
+        {
+            "status" : "Done",
+            "title" : "Project Design in Design Innovation Studio",
+            "role" : "adsf",
+            "desc" : "adsf",
+            "link" : "asdf"
+        },
+        {
+            "status" : "Currently Working",
+            "title" : "Co-op Habit Tracker App",
+            "role" : "adsf",
+            "desc" : "adsf",
+            "link" : "none"
+        }
+    ]
+}

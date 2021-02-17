@@ -5,7 +5,8 @@
   "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "scss": "node-sass styles.sass styles.css -wo dist"
+    "scss": "node-sass styles.sass styles.css -wo dist",
+    "bscss": "node-sass --watch scss/bootstrap/bootstrap.scss:css/bootstrap.css"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/patriciaathens/patriciaathens.github.io#readme",
   "dependencies": {
+    "bootstrap": "^5.0.0-beta2",
     "node-sass": "^5.0.0"
   }
 }
