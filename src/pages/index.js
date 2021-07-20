@@ -1,6 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import './index.sass';
+import 'bootstrap/dist/css/bootstrap.css';
 import App from './App';
 
 const IndexPage = () => {
