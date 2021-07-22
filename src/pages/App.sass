@@ -1,18 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap')
+
+@font-face
+   font-family: 'Space Grotesk'
+   src: url("../fonts/SpaceGrotesk-2.0.0/ttf/SpaceGrotesk[wght].ttf") format("truetype")
+
+$spaceg: 'Space Grotesk', sans-serif
+$secular: 'Secular One', sans-serif
+    
 $dark-blue: #28282A
 $blue: #6b818c
 $red: #db5461
 $white: #f7ebfe
 $yellow: #fed766
 
+h1
+    font-family: $secular
+    font-size: 60px
+
+h2
+    font-family: $spaceg
+
 nav
+    font-family: $spaceg
     padding: 1em
     background-color: $dark-blue
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2), 0 0 10px 0 rgba(0, 0, 0, 0.19)
 
     .nav-item, a, .nav-link
         color: $white
     .nav-item:hover
         color: $red
     .nav-item:active
+        color: $blue
+    .navbar-brand
+        font-family: $secular
+
+img
+    height: 300px
+
+main
+    font-family: $spaceg
+    margin: 2% 20%
+    padding: 4%
+    // height: 72vh
+    // width: auto
+    // display: flex
+    height: calc(100vh - 10%)
+    color: $white
+    overflow: auto
+    
+
+    .name
         color: $blue
     

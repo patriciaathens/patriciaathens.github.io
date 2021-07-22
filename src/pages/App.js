@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import NavBar from '../components/navbar';
+import Main from '../components/main';
+import About from '../components/about';
 import Projects from '../components/projects';
 import Designs from '../components/designs';
 import Contact from '../components/contact';
@@ -13,6 +15,8 @@ import {
     useParams
 } from "react-router-dom";
 
+import portrait from '../images/portrait.jpg';
+
 import './App.sass';
 
 class App extends Component {
@@ -23,6 +27,12 @@ class App extends Component {
                 <Router>
                     <NavBar />
                     <Switch>
+                        <Route exact path="/">
+                            <Main />
+                        </Route>
+                        <Route exact path="/about">
+                            <About />
+                        </Route>
                         <Route exact path="/projects">
                             <Projects />
                         </Route>
@@ -34,12 +44,8 @@ class App extends Component {
                         </Route>
                     </Switch>
                     
-                    <div class="card">
-                    {/* <img class="card-img-top" src="" alt="Card image cap" /> */}
-                    <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                    </div>
+                    
+                    
                 </Router>
                 
             </React.Fragment>

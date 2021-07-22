@@ -5,9 +5,9 @@ import App from './App';
 
 const IndexPage = () => {
   return (
-    <main>
+    <React.Fragment>
       <App />
-    </main>
+    </React.Fragment>
   )
 }
 
