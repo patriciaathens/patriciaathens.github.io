@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {MarkGithubIcon} from '@primer/octicons-react'
 
 const Contact = () => {
     return (
@@ -6,7 +7,7 @@ const Contact = () => {
             <section className="p-2">
                 <h1>Contact Me!</h1>
                 <ul>
-                    <li>hi</li>
+                    <li><MarkGithubIcon size={16} /></li>
                 </ul>
             </section>
         </main>
