@@ -4,7 +4,7 @@ import Main from '../components/main';
 import About from '../components/about';
 import Projects from '../components/projects';
 import Designs from '../components/designs';
-import Contact from '../components/contact';
+
 import {
     BrowserRouter as Router,
     Switch,
@@ -38,9 +38,6 @@ class App extends Component {
                         </Route>
                         <Route exact path="/designs">
                             <Designs />
-                        </Route>
-                        <Route exact path="/contact">
-                            <Contact />
                         </Route>
                     </Switch>
                     
