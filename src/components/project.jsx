@@ -10,12 +10,15 @@ class Project extends Component {
                 {/* <img className="card-img-top" src="..." alt="Card image cap"> */}
                 <div className="project-info">
                     <h4 className="project-title">{project.title}<span className="project-type">{project.type}</span></h4>
-                    <h5 className="project-subtitle">sponsored by {project.employer} in {project.year}</h5>
+                    <h5 className="project-subtitle">sponsored by <span class="project-highlight">{project.employer}</span> in <span class="project-highlight">{project.year}</span></h5>
+                    <h5 className="project-subtitle">{project.blurb}</h5>
                     <p className="project-ptitle">About the Project</p>
                     <p className="project-desc">{project.desc}</p>
                     <p className="project-ptitle">My Role</p>
                     <p className="project-desc">{project.myrole}</p>
-                    <a href={project.github} target="_blank" className="btn git-btn">Github</a>
+                    <p className="project-ptitle">The Challenges</p>
+                    <p className="project-desc">{project.challenges}</p>
+                    {/* <a href={project.github} target="_blank" className="btn git-btn">Github</a> */}
                 </div>
                 {/* <img className="mockup-img rounded" src={project.mockup1} alt={project.mockup1_caption} />
                 <img className="mockup-img rounded" src={project.mockup2} alt={project.mockup2_caption} /> */}

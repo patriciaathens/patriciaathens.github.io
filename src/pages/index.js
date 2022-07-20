@@ -4,10 +4,6 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.bundle';
 import App from './App';
 
-
-
-
-
 const IndexPage = () => {
   return (
     <React.Fragment>
@@ -16,4 +12,4 @@ const IndexPage = () => {
   )
 }
 
-export default IndexPage
+export default IndexPage;
