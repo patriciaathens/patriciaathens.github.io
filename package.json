@@ -8,6 +8,7 @@
     "gatsby"
   ],
   "scripts": {
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "develop": "gatsby develop",
     "start": "gatsby develop",
     "build": "gatsby build",
@@ -28,5 +29,8 @@
     "react-router-hash-link": "^2.4.3",
     "react-scroll": "^1.8.2",
     "sass": "^1.35.2"
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
   }
 }
