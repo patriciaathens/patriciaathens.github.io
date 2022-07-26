@@ -7,11 +7,8 @@ const Main = () => {
             <section className="p-2">
                 <h1>Hello! <br/>My name is <span className="name">Patricia Acorda</span></h1>
                 <h2>I'm a Computer Science graduate with a focus in Website Development & UI/UX Design.</h2>
-                <p class="highlight-red">
-                    I'm looking for work around the end of August 2022.
-                </p>
                 <p>
-                    I currently work as the <span class="highlight-blue">Sci.CORPS Instructor</span> at the Yale Peabody Museum under the EVOLUTIONS Program!
+                    <span class="highlight-yellow">CURRENTLY:</span> Sci.CORPS Instructor @ Yale Peabody Museum's EVOLUTIONS Program until August 22, 2022.
                 </p>
                 <p>
                     I <span class="highlight-blue">manage and guide</span> over 15 High School staff members in creating projects to aid their science communication skills and build a safe community to break down some of the barriers that youths face when pursing a career in STEM.
