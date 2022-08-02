@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import { Layout } from "../components/layout";
 
 
-const About = () => {
+const About = ({ setHeadComponents }) => {
+  setHeadComponents(HeadComponents);
   return (
     <Layout>
       <main className="rounded d-flex flex-column">
