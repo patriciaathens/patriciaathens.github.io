@@ -4,4 +4,10 @@ module.exports = {
     title: "Patricia Athens Acorda - Portfolio",
   },
   plugins: ["gatsby-plugin-sass"],
+},
+{
+  resolve: 'gatsby-plugin-load-script',
+  options: {
+    src: '/script.js', // Change to the script filename
+  },
 };

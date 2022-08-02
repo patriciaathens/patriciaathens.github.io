@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import { Layout } from "../components/layout";
 
-const About = () => {
+
+const About = ({ setHeadComponents }) => {
+  setHeadComponents(HeadComponents);
   return (
     <Layout>
       <main className="rounded d-flex flex-column">
@@ -24,8 +26,7 @@ const About = () => {
           </p>
         </section>
         <section className="p-2">
-          <h1>Skills & Experience</h1>
-
+          <h1>Skillset</h1>
           <p>
             I'm passionate about creating designs that are colorful and clean. I
             specialize in frontend design, having expertise in a variety of
